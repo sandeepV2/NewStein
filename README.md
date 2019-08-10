@@ -1,2 +1,2 @@
 # NewStein
-Full stack Node js
+Full MEAN stack for typeScript and js.
