@@ -1,0 +1,64 @@
+Creating repo from local machine.
+$ git init
+
+Branching
+-> Create branch from master branch.
+   Master -> Production
+   Dev -> where development of new feature happens.
+
+
+ Hot Fix goes to release-master
+ Once the release is done, the changes are taken to master.
+
+ * Creating branch
+ git branch <branchName>
+
+ * Switching to the branch
+ git checkout <branchName>
+
+* Add a file to tracking
+git add <fileName>
+
+* Commiting code
+git commit -m "message"
+
+* stash your changes.
+Save the changes that you have done, but dont want to commit.
+$git stash <your changes>
+
+- How to get the stash back
+git apply <stash-tag>
+
+
+* Push changes to server after commit
+git push
+
+* Revert back the locally committed changes.
+    Delete the most recent commit, keeping the work you've done:
+
+    $git reset --soft HEAD~1
+    Delete the most recent commit, destroying the work you've done:
+
+    $git reset --hard HEAD~1
+
+
+* Revert the commited changes.
+$ git revert <commited-hash-tag>
+
+* List all the branches created 
+$ git branch -a 
+
+* To import the newly created branch from remote server
+$ git fetch
+
+* Delete branch
+$ git branch -d <branchname>
+
+* Show all the commits
+$ git log 
+
+* Rebase/ get back to the orgin of branch
+$ git rebase 
+
+* how to handle conflicts.
+
