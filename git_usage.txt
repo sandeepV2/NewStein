@@ -11,13 +11,16 @@ Branching
  Once the release is done, the changes are taken to master.
 
  * Creating branch
- git branch <branchName>
+ $git branch <branchName>
 
  * Switching to the branch
- git checkout <branchName>
+ $git checkout <branchName>
 
 * Add a file to tracking
-git add <fileName>
+$git add <fileName>
+
+* Remove file from tracking
+$git rm <fileName> -f
 
 * Commiting code
 git commit -m "message"
