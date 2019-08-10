@@ -60,5 +60,14 @@ $ git log
 * Rebase/ get back to the orgin of branch
 $ git rebase 
 
+
 * how to handle conflicts.
+Be on the branch
+pull the branch details of other branch
+$ git pull origin <testBranch1> //being on testBranch2
+// conflicts will arise here.
+$ git add 
+$ git commit
+
+
 
