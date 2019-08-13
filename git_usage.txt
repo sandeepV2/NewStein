@@ -1,3 +1,6 @@
+// This is the tutorial to understande the basic commands of
+// git. Lets have some fun with conflicting to master branch from `testBranch1`
+
 Creating repo from local machine.
 $ git init
 
