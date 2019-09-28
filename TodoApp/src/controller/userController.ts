@@ -33,4 +33,14 @@ export class UserController {
         }
         
     }
+    public async Update (req:Request, res:Response){
+        try{
+            let user = await UserService.Update(req);
+            return res.json(user);
+        }
+        catch(err){
+            console.log(err);
+            return err;
+        }
+    }
 }

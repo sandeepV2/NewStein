@@ -19,6 +19,28 @@ export class AuthenticateService{
             res.status(401).send('Bad Request, Access Denied');
         }
     }
+
+    public static authorization(req:any, res:express.Response, next:any){
+
+        if (req.user.role != 'admin'){
+            res.status(401).send('Authorization failed');
+        }
+        next()
+
+        /*let accessToken = req.header("Authorization");
+        if (!accessToken){
+            res.send("Access Denied");
+        }
+        try{
+            let decodedData =  Jwt.verify(accessToken, "MySecretKey");
+            req.user = decodedData;
+            
+        }
+        catch(err){
+            console.log(err);
+            res.status(401).send('Bad Request, Access Denied');
+        }*/
+    }
 }
 
 // TO DO Add authorization function here to return admin.
