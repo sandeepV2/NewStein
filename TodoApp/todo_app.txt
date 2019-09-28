@@ -1,0 +1,27 @@
+npm init -> to initialize package.json
+
+*** package.json ***
+script will include dependencies
+
+* Gulp
+* Grunt
+
+tsc --init -> to create tsConfig.json file
+(config releated to typescript file)
+
+Mizolla -> ES06 (EschemeScript)
+Microsoft -> typescript 
+
+
+*** tsconfig.json ***
+
+- file type *.fs
+
+which file to compile 
+* include
+* exclude
+
+base URL
+OutDir
+####################
+
