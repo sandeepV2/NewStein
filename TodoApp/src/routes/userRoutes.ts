@@ -10,3 +10,4 @@ userRoutes.get('/getUser/:userId', userControllerObj.GetUser);
 userRoutes.post('/register', userControllerObj.Register);
 userRoutes.post('/login', userControllerObj.Login);
 userRoutes.post('/update', userControllerObj.Update);
+userRoutes.get('/hasPermission', AuthenticateService.authenticate, AuthenticateService.authorization, userControllerObj.hasPermission)

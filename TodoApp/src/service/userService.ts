@@ -39,11 +39,17 @@ export class UserService{
         }
     }
 
-    /*public static async Update(req:express.Request){
-        try{
-            let user = await userModel.findOneAndUpdate({name:req.body.name}).exec()
-        }
-    }*/
+    public static async Update(req:express.Request){
+        let user = await userModel.findOneAndUpdate({name:req.body.name}, {$set:{name:"Naomi"}}, {new: true}, (err, doc) => {
+            if (err) {
+                console.log("Something wrong when updating data!");
+            }
+            
+            console.log(doc);
+        });
+        return user;
+    }
+
 
     public static async Login(req:express.Request){
         try{

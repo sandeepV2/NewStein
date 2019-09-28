@@ -2,7 +2,8 @@
 import {Request, Response, response} from 'express'
 import { request } from 'https';
 import {UserService} from "./../service/userService"
-
+import {AuthenticateService} from "./../middleware/authenticate"
+import {permissionTypes} from "./../middleware/permission"
 
 export class UserController {
     public async GetAllUser (req:Request, res:Response){
@@ -42,5 +43,11 @@ export class UserController {
             console.log(err);
             return err;
         }
+    }
+
+    public async hasPermission(req:Request, res:Response, next:any){
+        // TO DO user this function within update.
+        let isPerm = AuthenticateService.checkPermission(req, res,permissionTypes.userShow);
+        res.send("Worked")
     }
 }
