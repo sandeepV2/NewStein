@@ -2,6 +2,8 @@ import * as express from 'express'
 import * as bodyParser from 'body-parser'
 
 import {Request, Response} from 'express'
+import {Db} from "./startup/db"
+
 
 class UserApp{
     app: express.Application;
@@ -9,6 +11,7 @@ class UserApp{
     constructor(){
         this.app = express()
         this.configBodyParser()
+        Db.connectDb()
     }
 
     private configBodyParser(){

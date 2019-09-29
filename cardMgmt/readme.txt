@@ -9,6 +9,8 @@ Commands to create new app.
 * create server.ts 
 * npm install body-parser --save
 * npm install @types/body-parser 
+* npm install mongoose --save
+* npm install @types/mongoose
 
 // check if server is running on browser with mentioned port.
 (* tsc server.ts, npm start)
