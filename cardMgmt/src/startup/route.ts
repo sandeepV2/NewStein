@@ -1,5 +1,6 @@
 import * as express from 'express'
 import {cardRoutes} from "./../routes/cardRoutes"
+import {userRoutes} from "./../routes/userRoutes"
 import { throws } from 'assert';
 
 export class Route{

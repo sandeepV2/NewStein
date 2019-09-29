@@ -11,6 +11,10 @@ Commands to create new app.
 * npm install @types/body-parser 
 * npm install mongoose --save
 * npm install @types/mongoose
+// middleware authentication
+* npm install bcrypt --save
+* npm install jsonwebtoken --save
+
 
 // check if server is running on browser with mentioned port.
 (* tsc server.ts, npm start)
