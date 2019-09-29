@@ -3,7 +3,7 @@ import * as bodyParser from 'body-parser'
 
 import {Request, Response} from 'express'
 import {Db} from "./startup/db"
-
+import {Route} from "./startup/route"
 
 class UserApp{
     app: express.Application;
@@ -12,6 +12,7 @@ class UserApp{
         this.app = express()
         this.configBodyParser()
         Db.connectDb()
+        Route.configRoutes(this.app)
     }
 
     private configBodyParser(){
@@ -31,6 +32,6 @@ userApp.app.listen(port, host, () => {
     console.log('server is running');
 });
 
-userApp.app.get('/', (req:Request, res:Response)=>{
+/*userApp.app.get('/', (req:Request, res:Response)=>{
     res.send('server is running on my lucky port');
-});
+});*/
