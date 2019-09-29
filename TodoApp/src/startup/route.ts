@@ -2,7 +2,6 @@ import * as express from 'express'
 import {todoRoutes} from "./../routes/todoRoutes"
 import { throws } from 'assert';
 import { userRoutes } from "./../routes/userRoutes";
-import { AuthenticateService } from "./../middleware/authenticate";
 
 export class Route{
 
