@@ -10,5 +10,6 @@ export class Route{
             res.status(200).send("API is working");
         });
         app.use('/api/cards/', cardRoutes)
+        app.use('/api/users/', userRoutes)
     }
 }
